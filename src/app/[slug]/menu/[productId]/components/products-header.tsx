@@ -15,7 +15,7 @@ const ProductHeader = ({ products }: IProductHeaderProps) => {
     const router = useRouter();
     const handleBackClick = () => router.back();
     return (
-        <div className="relative h-[300px] w-full">
+        <div className="relative min-h-[300px] w-full">
             <Button
                 variant="secondary"
                 className="absolute left-4 top-4 z-50 rounded-full"
