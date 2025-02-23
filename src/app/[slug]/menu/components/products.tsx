@@ -1,11 +1,11 @@
 import { Product } from "@prisma/client"
 import Image from "next/image";
 import Link from "next/link";
-interface ProductsProps {
+interface IProductsProps {
     products: Product[]
 }
 
-const Products = ({products}: ProductsProps) => {
+const Products = ({products}: IProductsProps) => {
     return (
         <div className="space-y-3 px-5 ">
             {products.map((product) => (

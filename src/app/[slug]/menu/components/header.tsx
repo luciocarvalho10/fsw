@@ -7,11 +7,11 @@ import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
-interface RestaurantHeaderProps {
+interface IRestaurantHeaderProps {
   restaurant: Pick<Restaurant, "name" | "coverImageUrl">;
 }
 
-const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
+const RestaurantHeader = ({ restaurant }: IRestaurantHeaderProps) => {
   const router = useRouter();
   const handleBackClick = () => router.back();
   return (

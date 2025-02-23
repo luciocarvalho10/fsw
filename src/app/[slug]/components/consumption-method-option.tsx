@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ConsumptionMethodOptionProps {
+interface IConsumptionMethodOptionProps {
   imageUrl: string;
   imageAlt: string;
   buttonText: string;
@@ -19,7 +19,7 @@ const ConsumptionMethodOption = ({
   imageAlt,
   option,
   slug,
-}: ConsumptionMethodOptionProps) => {
+}: IConsumptionMethodOptionProps) => {
   return (
     <Card>
       <CardContent className="flex flex-col items-center justify-center gap-8 py-8">

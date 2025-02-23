@@ -6,7 +6,7 @@ import { db } from "@/lib/prisma";
 import RestaurantCategories from "./components/categories";
 import RestaurantHeader from "./components/header";
 
-interface RestaurantPageProps {
+interface IRestaurantPageProps {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ consumptionMethod: string }>;
 }
@@ -19,7 +19,7 @@ const isConsumptionMethodValid = (consumptionMethod: string) =>
 const RestaurantPage = async ({
   params,
   searchParams,
-}: RestaurantPageProps) => {
+}: IRestaurantPageProps) => {
   const { slug } = await params;
   const { consumptionMethod } = await searchParams;
   const restaurant = await db.restaurant.findUnique({

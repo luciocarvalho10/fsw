@@ -9,7 +9,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 import Products from "./products";
 
-interface RestaurantCategoriesProps {
+interface IRestaurantCategoriesProps {
   restaurant: Prisma.RestaurantGetPayload<{
     include: {
       menuCategories: {
@@ -23,7 +23,7 @@ type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
   include: { products: true };
 }>
 
-const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
+const RestaurantCategories = ({ restaurant }: IRestaurantCategoriesProps) => {
   const [selectedCategory, setSelectedCategory] =
   useState<MenuCategoriesWithProducts>(restaurant.menuCategories[0]);
 
