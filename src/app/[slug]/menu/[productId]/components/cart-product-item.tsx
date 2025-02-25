@@ -12,13 +12,15 @@ interface ICartProductItemProps {
 }
 
 const CartProductItem = ({ product }: ICartProductItemProps) => {
-    const { decresaseProductQuantity } = useContext(CartContext);
+    const { decresaseProductQuantity, increaseProductQuantity } = useContext(CartContext);
 
     function handleDecreaseQuantity(): void {
         decresaseProductQuantity(product.id);
     }
 
-    function handleIncreaseQuantity(): void { }
+    function handleIncreaseQuantity(): void {
+        increaseProductQuantity(product.id);
+    }
 
     return (
         <div className="flex items-center justify-between">
