@@ -1,23 +1,24 @@
 import { ChevronLeftIcon, ChevronRightIcon, TrashIcon } from "lucide-react";
 import Image from "next/image";
+import { useContext } from "react";
 
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/helpers/format-currency";
 
-import { ICartProduct } from "../../contexts/cart";
+import { CartContext, ICartProduct } from "../../contexts/cart";
 
 interface ICartProductItemProps {
-    product: ICartProduct
+    product: ICartProduct;
 }
 
 const CartProductItem = ({ product }: ICartProductItemProps) => {
+    const { decresaseProductQuantity } = useContext(CartContext);
 
     function handleDecreaseQuantity(): void {
-
+        decresaseProductQuantity(product.id);
     }
-    function handleIncreaseQuantity(): void {
 
-    }
+    function handleIncreaseQuantity(): void { }
 
     return (
         <div className="flex items-center justify-between">
@@ -27,16 +28,26 @@ const CartProductItem = ({ product }: ICartProductItemProps) => {
                     <Image src={product.imageUrl} alt={product.name} fill />
                 </div>
                 <div className="space-y-1">
-                    <p className="text-xs max-w-[90%] truncate">{product.name}</p>
-                    <p className="text-ms font-semibold">{formatCurrency(product.price)}</p>
+                    <p className="max-w-[90%] truncate text-xs">{product.name}</p>
+                    <p className="text-ms font-semibold">
+                        {formatCurrency(product.price)}
+                    </p>
 
                     {/* QUANTIDADE */}
                     <div className="flex items-center gap-1 text-center">
-                        <Button variant="outline" className="h-7 w-7 rounded-lg" onClick={handleDecreaseQuantity}>
+                        <Button
+                            variant="outline"
+                            className="h-7 w-7 rounded-lg"
+                            onClick={handleDecreaseQuantity}
+                        >
                             <ChevronLeftIcon />
                         </Button>
                         <p className="w-7 text-xs">{product.quantity}</p>
-                        <Button variant="destructive" className="h-7 w-7 rounded-lg" onClick={handleIncreaseQuantity}>
+                        <Button
+                            variant="destructive"
+                            className="h-7 w-7 rounded-lg"
+                            onClick={handleIncreaseQuantity}
+                        >
                             <ChevronRightIcon />
                         </Button>
                     </div>
@@ -44,11 +55,15 @@ const CartProductItem = ({ product }: ICartProductItemProps) => {
             </div>
 
             {/* DIREITA */}
-            <Button variant="outline" className="h-7 w-7 rounded-lg" onClick={handleDecreaseQuantity}>
+            <Button
+                variant="outline"
+                className="h-7 w-7 rounded-lg"
+                onClick={handleDecreaseQuantity}
+            >
                 <TrashIcon />
             </Button>
         </div>
     );
-}
+};
 
 export default CartProductItem;
