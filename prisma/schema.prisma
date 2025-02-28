@@ -59,10 +59,12 @@ model Product {
 }
 
 model Order {
-  id        Int      @id @default(autoincrement())
-  total     Float
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id           Int      @id @default(autoincrement())
+  total        Float
+  customerName String
+  customerCpf  String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   status            OrderStatus
   consumptionMethod ConsumptionMethod
