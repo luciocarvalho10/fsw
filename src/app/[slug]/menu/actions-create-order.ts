@@ -1,6 +1,7 @@
 "use server"
 
 import { Order } from "@prisma/client";
+import { redirect } from "next/navigation";
 
 import { db } from "@/lib/prisma";
 
@@ -47,4 +48,5 @@ export const createOrder = async (input: ICreateOrderInput) => {
             total: productsWithPricesAndQuantities.reduce((sum, product) => sum + product.price * product.quantity, 0)
         }
     })
+    redirect(`/${input.slug}/orders`)
 }
