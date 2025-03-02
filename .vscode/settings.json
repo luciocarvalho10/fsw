@@ -1,10 +1,311 @@
 {
-  "editor.lineHeight": 2,
-  "editor.tabSize": 2,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.renderWhitespace": "boundary",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[typescript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "javascript",
+    "javascriptreact"
+  ],
+  "autoimport.doubleQuotes": true,
+  "autoimport.filesToScan": "**/*.{ts,tsx, js,jsx}",
+  "autoimport.showNotifications": true,
+  "autoimport.useSemiColon": false,
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.saveFileBeforeRun": false,
+  "codeium.enableSearch": true,
+  "colorize.colorized_colors": [
+    "BROWSERS_COLORS",
+    "HEXA",
+    "RGB",
+    "HSL",
+    "OKLAB",
+    "OKLCH"
+  ],
+  "colorize.enable_search_variables": true,
+  "colorize.hide_current_line_decorations": true,
+  "colorize.include": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl"
+  ],
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
+  "console-ninja.featureSet": "Community",
+  "css.customData": [
+    "../../workspaces/type-erros.css"
+  ],
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderIndicators": true,
+  "diffEditor.wordWrap": "on",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoIndent": "full",
+  "editor.autoSurround": "languageDefined",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit",
     "format.document": "explicit"
   },
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.detectIndentation": true,
+  "editor.dragAndDrop": true,
+  "editor.emptySelectionClipboard": false,
+  "editor.experimentalInlineEdit.showToolbar": "always",
+  "editor.folding": true,
+  "editor.foldingHighlight": true,
+  "editor.foldingImportsByDefault": false,
+  "editor.foldingStrategy": "auto",
+  "editor.fontFamily": "'Fira Code', 'CaskaydiaCove NF', 'JetBrains Mono' ,Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "600",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.indentation": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.linkedEditing": true,
+  "editor.matchBrackets": "always",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "editor.occurrencesHighlight": "singleFile",
+  "editor.parameterHints.cycle": true,
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "inline",
+    "other": "inline",
+    "strings": "inline"
+  },
+  "editor.rename.enablePreview": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderFinalNewline": "on",
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.scrollBeyondLastLine": true,
+  "editor.scrollPredominantAxis": true,
+  "editor.selectionHighlight": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.showFoldingControls": "always",
+  "editor.showUnused": true,
+  "editor.snippetSuggestions": "top",
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.preview": true,
+  "editor.suggest.showWords": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "deepIndent",
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "postcss": "css",
+    "typescript": "typescriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "typecript": "tsx"
+  },
+  "emmet.useInlineCompletions": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "explorer.compactFolders": false,
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.module": "php",
+    "*.sql": "sql"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.showPushSuccessNotification": true,
+  "githubPullRequests.fileListLayout": "flat",
+  "gitlens.defaultDateFormat": "dddd Do MMMM YYYY - HH:MM:ss ",
+  "gitlens.defaultDateShortFormat": "D/MM/YY",
+  "gitlens.defaultTimeFormat": "HH:MM:ss ",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.launchpad.indicator.openInEditor": true,
+  "gitlens.launchpad.indicator.useColors": true,
+  "gitlens.mode.statusBar.alignment": "left",
+  "gitlens.statusBar.alignment": "left",
+  "gitlens.views.branches.branches.layout": "list",
+  "html.format.indentInnerHtml": true,
+  "html.trace.server": "messages",
+  "material-icon-theme.activeIconPack": "nest",
+  "material-icon-theme.folders.associations": {
+    "actions": "Redux-actions",
+    "billingCycles": "core",
+    "dashboard": "mappings",
+    "entities": "class",
+    "external": "Public",
+    "header": "upload",
+    "imagens": "images",
+    "main": "admin",
+    "providers": "include",
+    "repositories": "resource",
+    "reducers": "Redux-reducer",
+    "store": "Redux-store",
+    "useCases": "controller",
+    "user": "cobol",
+    "menu": "Connection",
+    "[slug]": "Connection",
+    "[productId]": "Connection",
+  },
+  "material-icon-theme.hidesExplorerArrows": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSameLine": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": false,
+  "prettier.singleAttributePerLine": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": true,
+  "search.showLineNumbers": true,
+  "settingsSync.ignoredSettings": [],
+  "tailwindCSS.emmetCompletions": true,
+  "template-string-converter.addBracketsToProps": true,
+  "template-string-converter.autoRemoveTemplateString": true,
+  "template-string-converter.validLanguages": [
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact",
+    "vue",
+    "vuejs",
+    "go",
+    "graphql",
+    "json"
+  ],
+  "terminal.integrated.confirmOnExit": "always",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cwd": "/mnt/56189EB7189E9599/PROJETOS/2025/fsw",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.environmentChangesIndicator": "on",
+  "terminal.integrated.fontFamily": "'Fira Code', 'Hack Nerd Font' , 'CaskaydiaCove NF', 'JetBrains Mono' ,Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.smoothScrolling": true,
+  "typescript.format.enable": true,
+  "typescript.validate.enable": true,
+  "vscode_custom_css.imports": [
+    "file:///mnt/56189EB7189E9599/PROJETOS/WORKSPACES/type-erros.css"
+  ],
+  "window.commandCenter": true,
+  "window.zoomLevel": 1,
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.historyBasedLanguageDetection": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.showIcons": true,
+  "workbench.editor.tabActionLocation": "left",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.localHistory.maxFileEntries": 50,
+  "workbench.localHistory.maxFileSize": 1024,
+  "workbench.panel.showLabels": true,
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.reduceMotion": "on",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.restore": false,
+  "editor.lineHeight": 2
 }
