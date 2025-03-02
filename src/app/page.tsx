@@ -1,14 +1,11 @@
-import { Button } from '@/components/ui/button'
+import FSWDonalds from "@/app/components/fsw-donalds";
 
 const HomePage = () => {
-	return (
-		<div className='bg-blue-400'>
-			<h1 className='p-5 border border-red-500 rounded-xl'>
-				Hello World!
-			</h1>
-			<Button>Click me</Button>
-		</div>
-	)
-}
+  return (
+    <div className="flex h-full flex-col items-center justify-center bg-blue-400 p-5">
+      <FSWDonalds />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
