@@ -31,7 +31,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import { createOrder } from "../actions-create-order";
+import { createOrder } from "../actions/create-order";
 import { CartContext } from "../contexts/cart";
 import { isValidCpf } from "../helpers/cpf";
 
@@ -73,7 +73,7 @@ const FinishiOrderDialog = ({
       const consumptionMethod = searchParams.get(
         "consumptionMethod",
       ) as ConsumptionMethod;
-      
+
       startTransition(async () => {
         await createOrder({
           consumptionMethod,

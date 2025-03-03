@@ -5,8 +5,8 @@ import { redirect } from "next/navigation";
 
 import { db } from "@/lib/prisma";
 
-import { ICartProduct } from "./contexts/cart";
-import { removeCpfPunctuation } from "./helpers/cpf";
+import { ICartProduct } from "../contexts/cart";
+import { removeCpfPunctuation } from "../helpers/cpf";
 
 
 interface ICreateOrderInput extends Pick<Order, "consumptionMethod" | "customerCpf" | "customerName">{
