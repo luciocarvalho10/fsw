@@ -48,5 +48,5 @@ export const createOrder = async (input: ICreateOrderInput) => {
             total: productsWithPricesAndQuantities.reduce((sum, product) => sum + product.price * product.quantity, 0)
         }
     })
-    redirect(`/${input.slug}/orders`)
+    redirect(`/${input.slug}/orders?cpf=${removeCpfPunctuation(input.customerCpf)}`)
 }

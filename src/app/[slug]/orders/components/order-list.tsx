@@ -43,7 +43,7 @@ const OrderList = ({ orders }: IOrderListProps) => {
       {orders.map((order) => (
         <Card key={order.id}>
           <CardContent className="space-y-4 p-5">
-            <div className={`w-fit rounded-full text-xs font-semibold px-2 py-1 text-white ${statusClass(order.status)}`}>
+            <div className={`w-fit rounded-full text-xs font-semibold px-2 py-1  ${statusClass(order.status)}`}>
               {getStatusLabel(order.status)}
             </div>
             <div className="items-centr flex gap-2">

@@ -12,6 +12,9 @@ const OrdersPage = async ({ searchParams }: IOrdersPageProps) => {
   if (!cpf || !isValidCpf(cpf)) return <CpfForm />;
 
   const orders = await db.order.findMany({
+    orderBy: {
+      createdAt: "desc"
+    },
     where: {
       customerCpf: removeCpfPunctuation(cpf),
     },
@@ -28,11 +31,7 @@ const OrdersPage = async ({ searchParams }: IOrdersPageProps) => {
     },
   });
 
-  return (
-    <div>
-      <OrderList orders={orders} />
-    </div>
-  );
+  return <OrderList orders={orders} />
 };
 
 export default OrdersPage;
